@@ -1,16 +1,27 @@
 import { createBrowserRouter } from "react-router-dom";
-import { AdminLayout } from "../layouts/AdminLayout";
 import { PublicLayout } from "../layouts/PublicLayout";
-import { Home } from "../pages";
+import { About, Home, PostDetail, Posts } from "../pages";
 
 export const router = createBrowserRouter([
   {
     element: <PublicLayout />,
-    children: [{ path: "/", element: <Home /> }],
-  },
-  {
-    path: "/admin",
-    element: <AdminLayout />,
-    children: [{ index: true, element: <div>Admin</div> }],
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/sobre",
+        element: <About />,
+      },
+      {
+        path: "/publicacoes",
+        element: <Posts />,
+      },
+      {
+        path: "/publicacoes/:id",
+        element: <PostDetail />,
+      },
+    ],
   },
 ]);

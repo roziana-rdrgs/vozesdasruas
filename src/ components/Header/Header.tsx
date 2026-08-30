@@ -34,17 +34,17 @@ export function Header() {
             isMenuOpen ? "site-header__links--open" : ""
           }`}
         >
-          <a href="#sobre" onClick={closeMenu}>
+          <Link to="/sobre" onClick={closeMenu}>
             Sobre
-          </a>
+          </Link>
 
-          <a href="#como-ajudar" onClick={closeMenu}>
+          <Link to="/#como-ajudar" onClick={closeMenu}>
             Como ajudar
-          </a>
+          </Link>
 
-          <a href="#publicacoes" onClick={closeMenu}>
+          <Link to="/publicacoes" onClick={closeMenu}>
             Publicações
-          </a>
+          </Link>
 
           <a
             href="https://www.instagram.com/vozesdasruasm/"
