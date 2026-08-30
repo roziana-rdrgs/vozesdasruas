@@ -774,10 +774,9 @@ button {
 
   .hero {
     grid-template-columns: 1fr;
-
     min-height: auto;
-
     padding: 12px;
+    height: auto;
   }
 
   .hero__content {
