@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AdminLayout } from "../layouts/AdminLayout";
 import { PublicLayout } from "../layouts/PublicLayout";
+import { Home } from "../pages";
+
 export const router = createBrowserRouter([
   {
     element: <PublicLayout />,
-    children: [{ path: "/", element: <div>Home</div> }],
+    children: [{ path: "/", element: <Home /> }],
   },
   {
     path: "/admin",
