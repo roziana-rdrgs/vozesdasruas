@@ -1,0 +1,1 @@
+import { Link } from "react-router-dom"; export function Header() { return ( <header> <nav aria-label="Navegação principal"> <Link to="/">Vozes das Ruas</Link> <div> <Link to="/">Início</Link> <Link to="/sobre">Sobre</Link> <Link to="/publicacoes">Publicações</Link> </div> </nav> </header> ); }
