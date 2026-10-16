@@ -69,8 +69,10 @@ export function About() {
             </h2>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              vel lorem vitae ipsum consequat tincidunt.
+              Respeito, empatia, solidariedade e dignidade são os pilares que
+              sustentam o trabalho do Vozes das Ruas SM. Acreditamos que cada
+              pessoa merece ser tratada com humanidade e compaixão,
+              independentemente de sua situação social.
             </p>
           </div>
 
@@ -78,24 +80,22 @@ export function About() {
             <article className="about-value">
               <span className="about-value__number">01</span>
 
-              <h3>Respeito</h3>
+              <h3>Alimentação</h3>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                facilisi. Integer consequat sapien vitae lectus tincidunt, vitae
-                suscipit lorem posuere.
+                Preparação e distribuição de refeições para pessoas em situação
+                de rua.
               </p>
             </article>
 
             <article className="about-value">
               <span className="about-value__number">02</span>
 
-              <h3>Empatia</h3>
+              <h3>Acolhimento</h3>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse potenti. Praesent tincidunt felis vitae lorem
-                volutpat, non consectetur ipsum consequat.
+                Escuta, conversa e presença para lembrar que cada pessoa tem uma
+                história.
               </p>
             </article>
 
@@ -105,21 +105,21 @@ export function About() {
               <h3>Solidariedade</h3>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                vitae neque vel ipsum consequat aliquam. Sed consectetur erat at
-                massa tincidunt.
+                Arrecadação e distribuição de itens como roupas, cobertores e
+                produtos de higiene.
               </p>
             </article>
 
             <article className="about-value">
               <span className="about-value__number">04</span>
 
-              <h3>Dignidade</h3>
+              <h3>Luta</h3>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                erat volutpat. Donec feugiat, massa vitae consectetur tincidunt,
-                lectus lorem consequat.
+                Fortalecer o movimento social na defesa dos direitos da
+                população em situação de rua, dando visibilidade às suas
+                reivindicações e lutando por cidadania, justiça social e
+                políticas públicas efetivas.
               </p>
             </article>
           </div>

@@ -147,6 +147,17 @@ export const Home = () => (
               produtos de higiene.{" "}
             </p>{" "}
           </article>{" "}
+          <article className="action-card">
+            {" "}
+            <span className="action-card__number">04</span> <h3>Luta</h3>{" "}
+            <p>
+              {" "}
+              Fortalecer o movimento social na defesa dos direitos da população
+              em situação de rua, dando visibilidade às suas reivindicações e
+              lutando por cidadania, justiça social e políticas públicas
+              efetivas.{" "}
+            </p>{" "}
+          </article>{" "}
         </div>{" "}
       </div>{" "}
     </section>{" "}
