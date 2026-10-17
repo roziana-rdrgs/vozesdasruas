@@ -13,7 +13,8 @@ export function AdminGuard({ children }: AdminGuardProps) {
   const [state, setState] = useState<AccessState>("loading");
 
   useEffect(() => {
-    if (!isSupabaseConfigured || !supabase) {
+    const client = supabase;
+    if (!isSupabaseConfigured || !client) {
       setState("denied");
       return;
     }
@@ -23,7 +24,7 @@ export function AdminGuard({ children }: AdminGuardProps) {
         if (active) setState("denied");
         return;
       }
-      const { data, error } = await supabase
+      const { data, error } = await client
         .from("profiles")
         .select("role")
         .eq("id", session.user.id)
@@ -31,8 +32,8 @@ export function AdminGuard({ children }: AdminGuardProps) {
       if (active)
         setState(!error && data?.role === "admin" ? "allowed" : "denied");
     };
-    supabase.auth.getSession().then(({ data }) => checkAdmin(data.session));
-    const { data: listener } = supabase.auth.onAuthStateChange(
+    client.auth.getSession().then(({ data }) => checkAdmin(data.session));
+    const { data: listener } = client.auth.onAuthStateChange(
       (_event, session) => {
         queueMicrotask(() => {
           void checkAdmin(session);
