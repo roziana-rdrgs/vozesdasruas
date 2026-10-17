@@ -17,14 +17,15 @@ export function AdminLogin() {
     <p>Configure <code>VITE_SUPABASE_URL</code> e <code>VITE_SUPABASE_PUBLISHABLE_KEY</code> em <code>.env.local</code> e reinicie o Vite.</p><Link to="/" className="admin-text-link">Voltar ao site</Link>
   </section></main>;
 
+  const client = supabase;
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); setErrorMessage(""); setLoading(true);
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+      const { data, error } = await client.auth.signInWithPassword({ email: email.trim(), password });
       if (error) throw error;
       if (!data.user) throw new Error("Não foi possível validar o usuário.");
-      const { data: profile, error: profileError } = await supabase.from("profiles").select("role").eq("id", data.user.id).maybeSingle();
-      if (profileError || profile?.role !== "admin") { await supabase.auth.signOut(); throw new Error("Este usuário não tem permissão de administração."); }
+      const { data: profile, error: profileError } = await client.from("profiles").select("role").eq("id", data.user.id).maybeSingle();
+      if (profileError || profile?.role !== "admin") { await client.auth.signOut(); throw new Error("Este usuário não tem permissão de administração."); }
       navigate(redirectTo.startsWith("/admin") && redirectTo !== "/admin/login" ? redirectTo : "/admin", { replace: true });
     } catch (error) { setErrorMessage(error instanceof Error ? error.message : "Não foi possível entrar. Verifique suas credenciais."); }
     finally { setLoading(false); }
