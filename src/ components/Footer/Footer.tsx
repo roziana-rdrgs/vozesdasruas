@@ -5,7 +5,7 @@ export function Footer() {
       <p>
         {" "}
         © {new Date().getFullYear()} Vozes das Ruas. Todos os direitos
-        reservados.{" "}
+        reservados. <a href="/admin">Área do Administrador</a>
       </p>{" "}
     </footer>
   );
